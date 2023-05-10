@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dough-N-Herz</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="pictures/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="pictures/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="pictures/favicon-16x16.png">
+    <link rel="manifest" href="pictures/site.webmanifest">
+	
+</head>
+<body>
+	<header>
+        <nav>
+		  <a href="index.html"><img src="pictures/logo.webp" alt="Restaurant Name Logo"></a>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+    </header>
+	<div class="slideshow-container">
+		<div class="mySlides fade">
+			<img src="pictures/food3.avif">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="pictures/drinks1.jpg">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="pictures/atmos2.jpg">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="pictures/food1.avif">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="pictures/drinks2.jpg">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="pictures/atmos1.jpg">
+		</div>
+	</div>
+
+	<br>
+
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot" onclick="currentSlide(3)"></span>
+		<span class="dot" onclick="currentSlide(4)"></span>
+		<span class="dot" onclick="currentSlide(5)"></span>
+		<span class="dot" onclick="currentSlide(6)"></span>
+	</div>
+
+	<section class="about">
+        <h1>Welcome to Dough-N-Herz</h1>
+        <p>We are a family-owned restaurant that specializes in authentic cuisine from around the world. Our dishes are made with fresh, locally sourced ingredients, and our chefs are experts in their craft. Whether you're looking for a romantic dinner for two or a night out with friends, we have something for everyone.</p>
+        <a href="menu.html">View Menu</a>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Dough-N-Herz. All rights reserved.</p>
+    </footer>
+
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 2000); // Change image every 2 seconds
+		}
+	</script>
+
+</body>
+</html>
